@@ -15,7 +15,7 @@ export interface Post {
   providedIn: 'root'
 })
 export class PostService {
-  private apiUrl = 'http://localhost:3000/api'; // URL de base de l'API backend
+  private apiUrl = 'http://localhost:3001/api'; // URL de base de l'API backend
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
