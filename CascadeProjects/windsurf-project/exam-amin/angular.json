@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "exam-nom": {
+    "exam-amin": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "exam-nom:build:production"
+              "buildTarget": "exam-amin:build:production"
             },
             "development": {
-              "buildTarget": "exam-nom:build:development"
+              "buildTarget": "exam-amin:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,34 @@
+<div class="list-group">
+  @if (loading) {
+    <div class="text-center my-4">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Chargement...</span>
+      </div>
+    </div>
+  } @else if (error) {
+    <div class="alert alert-danger">{{ error }}</div>
+  } @else {
+    @for (post of posts; track post.id; let i = $index) {
+      <div class="list-group-item p-0 mb-2 border rounded">
+        <div 
+          class="p-3 d-flex justify-content-between align-items-center" 
+          style="cursor: pointer;"
+          (click)="togglePost(i)">
+          <h5 class="mb-0">{{ post.titre }}</h5>
+          <i class="bi" [ngClass]="post.isOpen ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+        </div>
+        
+        @if (post.isOpen) {
+          <div class="p-3 border-top">
+            <p class="mb-2">{{ post.contenu }}</p>
+            <div class="text-muted small">
+              <span>Par {{ post.auteur }}</span>
+              <span class="ms-2">•</span>
+              <span class="ms-2">{{ post.date | date:'dd/MM/yyyy' }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  }
+</div>
