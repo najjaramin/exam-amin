@@ -1,6 +1,57 @@
-# ExamNom
+# Application d'examen
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+
+## Commandes utilisées
+
+### Installation des dépendances
+```bash
+npm install
+```
+
+### Démarrer le serveur de développement frontend
+```bash
+ng serve
+# Si le port 4200 est occupé :
+ng serve --port 4201
+```
+
+### Démarrer le serveur backend
+```bash
+node server.js
+```
+
+### Commandes Git
+```bash
+# Vérifier l'état des fichiers
+git status
+
+# Ajouter tous les fichiers modifiés
+git add .
+
+# Créer un commit
+git commit -m "Message de commit"
+
+# Pousser les modifications vers le dépôt distant
+git push origin main
+```
+
+### Résolution des problèmes
+
+#### Si le port 4200 est occupé :
+```bash
+# Trouver le processus qui utilise le port 4200
+netstat -ano | findstr :4200
+
+# Arrêter le processus (remplacer <PID> par l'ID du processus)
+taskkill /PID <PID> /F
+```
+
+#### Si le backend ne répond pas :
+Vérifiez que le serveur backend est en cours d'exécution sur le port 3001 :
+```bash
+netstat -ano | findstr :3001
+```
 
 ## Development server
 
